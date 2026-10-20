@@ -1,0 +1,21 @@
+# Dependencies for circrna-mirna-bias-audit
+# Notebooks were run on Kaggle (GPU). Python 3.10+ recommended.
+# Exact versions were not recorded; the lower bounds below are the oldest
+# releases known to provide the features used. If results differ slightly,
+# record your own versions with: pip freeze > requirements-lock.txt
+
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+scikit-learn>=1.2        # HistGradientBoostingClassifier, PCA, cosine_similarity
+umap-learn>=0.5          # 8-dimensional UMAP in the manifold-augmentation step
+torch>=2.0               # HMA-GCA encoder, gated cross-attention, training loop
+matplotlib>=3.6
+seaborn>=0.12
+
+# Notebook environment
+jupyter
+ipython
+
+# Only needed by 01_dataset_analysis.ipynb, to unpack .7z dataset archives
+py7zr
